@@ -12,7 +12,7 @@ const BOT_TOKEN = process.env.BOT_TOKEN;
 const bot = new TelegramBot(BOT_TOKEN);
 
 // Setup webhook
-const url = "https://notifycast.vercel.app";
+const url = "https://notifycast.onrender.com";
 const webhookUrl = `${url}/bot${BOT_TOKEN}`;
 bot.setWebHook(webhookUrl);
 
