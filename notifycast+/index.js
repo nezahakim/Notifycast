@@ -5,6 +5,7 @@ const cheerio = require('cheerio');
 const cron = require('node-cron');
 const NodeCache = require('node-cache');
 const Parser = require('rss-parser');
+const express = require("express")
 
 // Initialize node-cache
 const cache = new NodeCache({ stdTTL: 86400 }); // Cache for 24 hours
@@ -22,7 +23,7 @@ const parser = new Parser({
 // Telegram Bot Token
 const token = process.env.BOT_TOKEN;
 const bot = new TelegramBot(token, { polling: true });
-
+const app = new express()
 
 bot.on("message", async (msg) => {
   if(msg.chat.type === 'private'){
@@ -293,7 +294,11 @@ bot.on('polling_error', (error) => {
   console.error('Polling error:', error);
 });
 
-console.log('Telegram Casting Bot is running...');
+
+
+app.listen(process.env.PORT || 8000, ()=>{
+  console.log('Telegram Casting Bot is running...')
+})
 
 // Graceful shutdown
 process.on('SIGINT', () => {
