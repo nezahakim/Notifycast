@@ -1,5 +1,5 @@
 const { Telegraf, Markup } = require('telegraf');
-const { BOT_TOKEN, CHANNEL_ID } = require('../config');
+const { BOT_TOKEN, CHANNEL_ID } = require('./config');
 const NewsService = require('../services/NewsService');
 const Cache = require('../services/CacheService');
 const { scheduleJob } = require('node-schedule');
