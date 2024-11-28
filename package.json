@@ -6,6 +6,7 @@
     "express": "^4.21.0",
     "node-cache": "^5.1.2",
     "node-cron": "^3.0.3",
+    "node-schedule": "^2.1.1",
     "node-telegram-bot-api": "^0.66.0",
     "redis": "^4.7.0",
     "rss-parser": "^3.13.0",
