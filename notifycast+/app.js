@@ -32,7 +32,7 @@ class NewsBot {
 
   setupCallbacks() {
     this.bot.action(/read_full_news:(.+)/, this.handleFullNews.bind(this));
-    this.bot.action(/source:(.+)/, this.handleSourceSelect.bind(this));
+    this.bot.action(/source:(.+)/, this.handleSources.bind(this));
   }
 
   async handleStart(ctx) {
